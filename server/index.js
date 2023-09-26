@@ -21,6 +21,14 @@ app.get("/getUsers", (req, res) => {
   })
 })
 
+app.get("/getCharacters", (req, res) => {
+  CharacterModel.find({}).then(function(characters) {
+    res.json(characters)
+  }).catch(function(err) {
+    res.json(err)
+  })
+})
+
 app.post("/createCharacter", async(req, res) => {
   const character = req.body;
   const newCharacter= new CharacterModel(character);

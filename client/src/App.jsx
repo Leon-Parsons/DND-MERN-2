@@ -4,13 +4,13 @@ import axios from 'axios'
 
 function App() {
 
-  const [users, setUsers] = useState([]);
+  const [characters, setUsers] = useState([]);
   
   useEffect(() => {
-    axios.get('http://localhost:3001/getUsers')
-    .then((users) => {
-      console.log(users)
-      setUsers(users.data)
+    axios.get('http://localhost:3001/getCharacters')
+    .then((characters) => {
+      console.log(characters)
+      setUsers(characters.data)
     }).catch(err => console.log(err))
   }, [])
 
@@ -18,11 +18,12 @@ function App() {
     <div>
       <h1>cat</h1>
       {
-        users.map(user => {
+        characters.map(character => {
           return <div>
             <h3>
-              {user.username}
-              {user.password}
+              {character.charName}
+               <br></br>
+              {character.charClass}
             </h3>
           </div>
         })
