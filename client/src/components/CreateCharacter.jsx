@@ -1,4 +1,6 @@
 import React from 'react'
+import {useState } from 'react'
+import axios from 'axios'
 
 function CreateCharacter() {
 
@@ -6,7 +8,7 @@ function CreateCharacter() {
   const [charClass, setCharClass] = useState()
 
   const Submit = () => {
-    axios.get('http://localhost:3001/createCharacter')
+    axios.post('http://localhost:3001/createCharacter', {charName, charClass})
     .then((characters) => {
       console.log(characters)
     }).catch(err => console.log(err))
@@ -14,9 +16,9 @@ function CreateCharacter() {
 
   return (
     <div>
-      <input type ="text" onchange={(e) => setCharName(e.target.value)}/>
-      <input type ="text" onchange={(e) => setCharClass(e.target.value)}/>
-      <button onclick={submit}>Create Character</button>
+      <input type ="text" onChange={(e) => setCharName(e.target.value)}/>
+      <input type ="text" onChange={(e) => setCharClass(e.target.value)}/>
+      <button onClick={Submit}>Create Character</button>
     </div>
   )
 }

@@ -11,41 +11,41 @@ const CharacterSchema = new mongoose.Schema({
   },
   charRace: {
     type: String,
-    required: true
+    required: false
   },
   charAlignment: {
     type: String,
-    required: true
+    required: false
   },
   charBackground: {
     type: String,
-    required: true
+    required: false
   },
   strength: {
     type: Number,
-    required: true
+    required: false
   },
   dexterity: {
     type: Number,
-    required: true
+    required: false
   },
   constitution: {
     type: Number,
-    required: true
+    required: false
   },
   intelligence: {
     type: Number,
-    required: true
+    required: false
   },
   wisdom: {
     type: Number,
-    required: true
+    required: false
   },
   charisma: {
     type: Number,
-    required: true
+    required: false
   }
-})
+});
 
 const CharacterModel = mongoose.model("characters", CharacterSchema);
 module.exports = CharacterModel;
