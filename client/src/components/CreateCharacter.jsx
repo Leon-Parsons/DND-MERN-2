@@ -9,9 +9,18 @@ function CreateCharacter() {
   const [charRace, setCharRace] = useState()
   const [charAlignment, setCharAlignment] = useState()
   const [charBackground, setCharBackground] = useState()
+  const [strength, setStrength] = useState()
+  const [dexterity, setDexterity] = useState()
+  const [constitution, setConstitution] = useState()
+  const [intelligence, setIntelligence] = useState()
+  const [wisdom, setWisdom] = useState()
+  const [charisma, setCharisma] = useState()
+  
+  
 
   const Submit = () => {
-    axios.post('http://localhost:3001/createCharacter', {charName, charClass, charRace, charAlignment, charBackground})
+    axios.post('http://localhost:3001/createCharacter', {charName, charClass, charRace, charAlignment, charBackground, 
+    strength, dexterity, constitution, intelligence, wisdom, charisma })
     .then((characters) => {
       console.log(characters)
     }).catch(err => console.log(err))
@@ -53,6 +62,69 @@ function CreateCharacter() {
         <option value = "Criminal">Criminal</option>
         <option value = "Entertainer">Entertainer</option>
       </select>
+
+      <label for="str-dd">Strength</label>
+      <select name="str-dd" onChange={(e) => setStrength(e.target.value)}>
+        <option value = "15">15</option>
+        <option value = "14">14</option>
+        <option value = "13">13</option>
+        <option value = "12">12</option>
+        <option value = "10">10</option>
+        <option value = "8">8</option>
+      </select>
+
+      <label for="dex-dd">Dexterity</label>
+      <select name="dex-dd" onChange={(e) => setDexterity(e.target.value)}>
+        <option value = "15">15</option>
+        <option value = "14">14</option>
+        <option value = "13">13</option>
+        <option value = "12">12</option>
+        <option value = "10">10</option>
+        <option value = "8">8</option>
+      </select>
+
+      <label for="con-dd">Constitution</label>
+      <select name="con-dd" onChange={(e) => setConstitution(e.target.value)}>
+        <option value = "15">15</option>
+        <option value = "14">14</option>
+        <option value = "13">13</option>
+        <option value = "12">12</option>
+        <option value = "10">10</option>
+        <option value = "8">8</option>
+      </select>
+
+      <label for="int-dd">Intelligence</label>
+      <select name="int-dd" onChange={(e) => setIntelligence(e.target.value)}>
+        <option value = "15">15</option>
+        <option value = "14">14</option>
+        <option value = "13">13</option>
+        <option value = "12">12</option>
+        <option value = "10">10</option>
+        <option value = "8">8</option>
+      </select>
+
+      <label for="wis-dd">Wisdom</label>
+      <select name="wis-dd" onChange={(e) => setWisdom(e.target.value)}>
+        <option value = "15">15</option>
+        <option value = "14">14</option>
+        <option value = "13">13</option>
+        <option value = "12">12</option>
+        <option value = "10">10</option>
+        <option value = "8">8</option>
+      </select>
+
+      <label for="cha-dd">Charisma</label>
+      <select name="cha-dd" onChange={(e) => setCharisma(e.target.value)}>
+        <option value = "15">15</option>
+        <option value = "14">14</option>
+        <option value = "13">13</option>
+        <option value = "12">12</option>
+        <option value = "10">10</option>
+        <option value = "8">8</option>
+      </select>
+
+
+
 
       <button onClick={Submit}>Create Character</button>
     </div>

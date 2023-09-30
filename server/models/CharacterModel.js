@@ -7,7 +7,7 @@ const CharacterSchema = new mongoose.Schema({
   },
   charClass: {
     type: String,
-    required: true
+    required: false
   },
   charRace: {
     type: String,
@@ -22,27 +22,27 @@ const CharacterSchema = new mongoose.Schema({
     required: false
   },
   strength: {
-    type: Number,
+    type: String,
     required: false
   },
   dexterity: {
-    type: Number,
+    type: String,
     required: false
   },
   constitution: {
-    type: Number,
+    type: String,
     required: false
   },
   intelligence: {
-    type: Number,
+    type: String,
     required: false
   },
   wisdom: {
-    type: Number,
+    type: String,
     required: false
   },
   charisma: {
-    type: Number,
+    type: String,
     required: false
   }
 });
