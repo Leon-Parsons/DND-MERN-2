@@ -16,8 +16,17 @@ function CreateCharacter() {
 
   return (
     <div>
-      <input type ="text" onChange={(e) => setCharName(e.target.value)}/>
-      <input type ="text" onChange={(e) => setCharClass(e.target.value)}/>
+      <label for="name-input">Name</label>
+      <input name="name-input" type ="text" onChange={(e) => setCharName(e.target.value)}/>
+
+      <label for="class-dd">Class</label>
+      <select name="class-dd" onChange={(e) => setCharClass(e.target.value)}>
+        <option value = "Barbarian">Barbarian</option>
+        <option value = "Bard">Bard</option>
+        <option value = "Cleric">Cleric</option>
+        <option value = "Druid">Druid</option>
+      </select>
+
       <button onClick={Submit}>Create Character</button>
     </div>
   )
