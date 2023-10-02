@@ -1,0 +1,16 @@
+#create-char-page {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.char-column {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#finalise-btn{
+  margin-top: 20px;
+}
