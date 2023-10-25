@@ -16,6 +16,15 @@ function CreateCharacter() {
   const [intelligence, setIntelligence] = useState()
   const [wisdom, setWisdom] = useState()
   const [charisma, setCharisma] = useState()
+
+  let numOptions = [
+    {label: "15", value: "15", isDisabled: false},
+    {label: "14", value: "14", isDisabled: false},
+    {label: "13", value: "13", isDisabled: false},
+    {label: "12", value: "12", isDisabled: false},
+    {label: "10", value: "10", isDisabled: false},
+    {label: "8", value: "8", isDisabled: false}
+  ];
   
   const Submit = () => {
     axios.post('http://localhost:3001/createCharacter', {charName, charClass, charRace, charAlignment, charBackground, 
@@ -68,62 +77,44 @@ function CreateCharacter() {
         <div id="char-stats-div" className='char-column'>
           <label for="str-dd">Strength</label>
           <select name="str-dd" onChange={(e) => setStrength(e.target.value)}>
-            <option value = "15">15</option>
-            <option value = "14">14</option>
-            <option value = "13">13</option>
-            <option value = "12">12</option>
-            <option value = "10">10</option>
-            <option value = "8">8</option>
+            {numOptions.map((e, key) => {
+              return <option key={e.value} value={e.value}>{e.label}</option>;
+            })}
           </select>
 
           <label for="dex-dd">Dexterity</label>
           <select name="dex-dd" onChange={(e) => setDexterity(e.target.value)}>
-            <option value = "15">15</option>
-            <option value = "14">14</option>
-            <option value = "13">13</option>
-            <option value = "12">12</option>
-            <option value = "10">10</option>
-            <option value = "8">8</option>
+            {numOptions.map((e, key) => {
+              return <option key={e.value} value={e.value}>{e.label}</option>;
+            })}
           </select>
 
           <label for="con-dd">Constitution</label>
           <select name="con-dd" onChange={(e) => setConstitution(e.target.value)}>
-            <option value = "15">15</option>
-            <option value = "14">14</option>
-            <option value = "13">13</option>
-            <option value = "12">12</option>
-            <option value = "10">10</option>
-            <option value = "8">8</option>
+            {numOptions.map((e, key) => {
+              return <option key={e.value} value={e.value}>{e.label}</option>;
+            })}
           </select>
 
           <label for="int-dd">Intelligence</label>
           <select name="int-dd" onChange={(e) => setIntelligence(e.target.value)}>
-            <option value = "15">15</option>
-            <option value = "14">14</option>
-            <option value = "13">13</option>
-            <option value = "12">12</option>
-            <option value = "10">10</option>
-            <option value = "8">8</option>
+            {numOptions.map((e, key) => {
+              return <option key={e.value} value={e.value}>{e.label}</option>;
+            })}
           </select>
 
           <label for="wis-dd">Wisdom</label>
           <select name="wis-dd" onChange={(e) => setWisdom(e.target.value)}>
-            <option value = "15">15</option>
-            <option value = "14">14</option>
-            <option value = "13">13</option>
-            <option value = "12">12</option>
-            <option value = "10">10</option>
-            <option value = "8">8</option>
+            {numOptions.map((e, key) => {
+              return <option key={e.value} value={e.value}>{e.label}</option>;
+            })}
           </select>
 
           <label for="cha-dd">Charisma</label>
           <select name="cha-dd" onChange={(e) => setCharisma(e.target.value)}>
-            <option value = "15">15</option>
-            <option value = "14">14</option>
-            <option value = "13">13</option>
-            <option value = "12">12</option>
-            <option value = "10">10</option>
-            <option value = "8">8</option>
+            {numOptions.map((e, key) => {
+              return <option key={e.value} value={e.value}>{e.label}</option>;
+            })}
           </select>
 
           <div id="finalise-char">
