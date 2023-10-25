@@ -17,8 +17,6 @@ function CreateCharacter() {
   const [wisdom, setWisdom] = useState()
   const [charisma, setCharisma] = useState()
   
-  
-
   const Submit = () => {
     axios.post('http://localhost:3001/createCharacter', {charName, charClass, charRace, charAlignment, charBackground, 
     strength, dexterity, constitution, intelligence, wisdom, charisma })
