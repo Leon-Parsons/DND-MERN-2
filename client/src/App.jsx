@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import CreateCharacter from './components/CreateCharacter';
+import NavBar from './components/NavBar';
 // import CharacterCreator from "./components/CreateCharacter";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div>
+      <NavBar/>
       <CreateCharacter/>
       {/* {
         characters.map(character => {
