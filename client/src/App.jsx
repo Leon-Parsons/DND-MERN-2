@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import CreateCharacter from './components/CreateCharacter';
-import NavBar from './components/NavBar';
 // import CharacterCreator from "./components/CreateCharacter";
 
 function App() {
@@ -19,21 +18,22 @@ function App() {
   // }, [])
 
   return (
-    <div>
-      <NavBar/>
-      <CreateCharacter/>
-      {/* {
-        characters.map(character => {
-          return <div>
-            <h3>
-              {character.charName}
-               <br></br>
-              {character.charClass}
-            </h3>
-          </div>
-        })
-      } */}
-    </div>
+    <>
+      <div>
+        <CreateCharacter/>
+        {/* {
+          characters.map(character => {
+            return <div>
+              <h3>
+                {character.charName}
+                <br></br>
+                {character.charClass}
+              </h3>
+            </div>
+          })
+        } */}
+      </div>
+    </>
   )
 }
 
