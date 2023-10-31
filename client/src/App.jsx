@@ -19,9 +19,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <CreateCharacter/>
-        {/* {
+      {/* <div>
+        {
           characters.map(character => {
             return <div>
               <h3>
@@ -31,8 +30,8 @@ function App() {
               </h3>
             </div>
           })
-        } */}
-      </div>
+        }
+      </div> */}
     </>
   )
 }
