@@ -18,20 +18,21 @@ function App() {
   // }, [])
 
   return (
-    <div>
-      <CreateCharacter/>
-      {/* {
-        characters.map(character => {
-          return <div>
-            <h3>
-              {character.charName}
-               <br></br>
-              {character.charClass}
-            </h3>
-          </div>
-        })
-      } */}
-    </div>
+    <>
+      {/* <div>
+        {
+          characters.map(character => {
+            return <div>
+              <h3>
+                {character.charName}
+                <br></br>
+                {character.charClass}
+              </h3>
+            </div>
+          })
+        }
+      </div> */}
+    </>
   )
 }
 
